@@ -132,10 +132,6 @@ public class SplashDemo extends Splash {
                     e.printStackTrace();
                 }
             }
-            else
-            {
-
-            }
         }
     }
 }
