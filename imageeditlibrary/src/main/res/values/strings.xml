@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">ImageEditLibrary</string>
+    <string name="no_images">Image not Found</string>
+    <string name="images">%d images</string>
+    <string name="save">Save</string>
+    <string name="apply">Apply</string>
+
+    <string name="stickers">Stickers</string>
+    <string name="fliter">Filter</string>
+    <string name="crop">Crop</string>
+    <string name="rotate">Rotate</string>
+    <string name="text">Text</string>
+    <string name="edit">Edit</string>
+
+
+    <string name="materialcolorpicker__app_name">Android Material Color Picker Dialog</string>
+    <string name="materialcolorpicker__descLib">Material Color Picker Dialog</string>
+    <string name="materialcolorpicker__errHex">Hex Code Format incorrect</string>
+    <string name="materialcolorpicker__inputColor">Color:</string>
+    <string name="materialcolorpicker__btnSelectColor">Select</string>
+    <string name="saving_image">Saving...</string>
+    <string name="input_hint">Enter Text</string>
+
+    <string name="internet_error_button_text">Retry</string>
+    <string name="internet_error">Internet is required for this application</string>
+
+    <string name="no_choose">Please Choose an image for Edit</string>
+    <string name="auto_newline">AutoNewline</string>
+    <string name="save_error">Save error!</string>
+    <string name="handing">Loading...</string>
+
+    <string-array name="fliters">
+        <item>Origin</item>
+        <item>Soft</item>
+        <item>Black</item>
+        <item>Classic</item>
+        <item>Gorgeous</item>
+        <item>Retro</item>
+        <item>Grace</item>
+        <item>Film</item>
+        <item>memory</item>
+        <item>Yogurt</item>
+        <item>Fleeting</item>
+        <item>shine</item>
+    </string-array>
+
+    <string name="more">More</string>
+    <string name="exit_without_save">Do you want to exit without save edited image? </string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="beauty">Beauty</string>
+    <string name="smooth">Smooth</string>
+    <string name="white_skin">White Skin</string>
+    <string name="internet_connection_fail_msg">No Internet Connection</string>
+    <string name="server_error">Server Error</string>
+
+    <string name="choose_image">Choose an Image for Edit</string>
+    <string name="edit_image">Edit Image</string>
+    <string name="save_path">Save Image Path : %s</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="strLoadingMsg">Loading...</string>
+    <string name="strAddImage">Add Image</string>
+
+
+    <string name="imageTransformation_CropCircleTransformation">circle</string>
+    <string name="imageTransformation_CropSquareTransformation">square</string>
+    <string name="imageTransformation_RoundedCornersTransformation">roundedCorners</string>
+    <string name="imageTransformation_ColorFilterTransformation">colorFilter</string>
+
+    <string name="imageTransformation_ColorPrimaryFilterTransformation">colorPrimary</string>
+    <string name="imageTransformation_ColorPrimaryDarkFilterTransformation">colorPrimaryDark</string>
+    <string name="imageTransformation_ColorAccentFilterTransformation">colorAccent</string>
+    <string name="imageTransformation_Color_1_FilterTransformation">color1</string>
+    <string name="imageTransformation_Color_2_FilterTransformation">color2</string>
+    <string name="imageTransformation_Color_3_FilterTransformation">color3</string>
+    <string name="imageTransformation_Color_4_FilterTransformation">color4</string>
+    <string name="imageTransformation_Color_5_FilterTransformation">color5</string>
+
+
+    <string name="imageTransformation_GrayscaleTransformation">grayscale</string>
+    <string name="imageTransformation_BlurTransformation">blur</string>
+    <string name="imageTransformation_MaskTransformation">mask</string>
+    <string name="imageTransformation_StarMaskTransformation">star</string>
+    <string name="imageTransformation_FlagMaskTransformation">flag</string>
+
+    <string name="imageTransformation_BagMaskTransformation">bag</string>
+    <string name="imageTransformation_BellMaskTransformation">bell</string>
+    <string name="imageTransformation_CloudMaskTransformation">cloud</string>
+    <string name="imageTransformation_FloristMaskTransformation">florist</string>
+    <string name="imageTransformation_HeartMaskTransformation">heart</string>
+    <string name="imageTransformation_PetsMaskTransformation">pet</string>
+    <string name="imageTransformation_PuzzleMaskTransformation">puzzle</string>
+    <string name="imageTransformation_TicketMaskTransformation">ticket</string>
+
+
+
+    <string name="imageTransformation_CatMaskTransformation">cat</string>
+    <string name="imageTransformation_AppleMaskTransformation">apple</string>
+    <string name="imageTransformation_Big_HeartMaskTransformation">big_heart</string>
+    <string name="imageTransformation_Boy_1_MaskTransformation">boy1</string>
+    <string name="imageTransformation_Boy_2_MaskTransformation">boy2</string>
+    <string name="imageTransformation_Boy_3_MaskTransformation">boy3</string>
+    <string name="imageTransformation_Girl_1_MaskTransformation">girl1</string>
+    <string name="imageTransformation_Girl_2_MaskTransformation">girl2</string>
+    <string name="imageTransformation_Girl_3_MaskTransformation">girl3</string>
+    <string name="imageTransformation_Girl_4_MaskTransformation">girl4</string>
+    <string name="imageTransformation_Hexagon_MaskTransformation">hexagon</string>
+    <string name="imageTransformation_Macro_MaskTransformation">macro</string>
+    <string name="imageTransformation_Lotus_MaskTransformation">lotus</string>
+
+
+
+    <string name="imageTransformation_SepiaFilterTransformation">sepia</string>
+    <string name="imageTransformation_ContrastFilterTransformation">contrast</string>
+    <string name="imageTransformation_InvertFilterTransformation">invert</string>
+    <string name="imageTransformation_PixelationFilterTransformation">pixelation</string>
+    <string name="imageTransformation_SketchFilterTransformation">sketch</string>
+    <string name="imageTransformation_SwirlFilterTransformation">swirl</string>
+    <string name="imageTransformation_BrightnessFilterTransformation">brightness</string>
+    <string name="imageTransformation_ToonFilterTransformation">toon</string>
+    <string name="imageTransformation_KuwaharaFilterTransformation">kuwahara</string>
+    <string name="imageTransformation_VignetteFilterTransformation">vignette</string>
+    <string name="strPermissionMsg">For Access this feature you need to give permission.</string>
+
+</resources>

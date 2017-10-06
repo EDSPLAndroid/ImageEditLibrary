@@ -1,0 +1,209 @@
+<HorizontalScrollView
+    android:id="@+id/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="none"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/btn_paint"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/edit"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_addImage"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/strAddImage"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_stickers"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/stickers"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_fliter"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:text="@string/fliter"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_crop"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/crop"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_rotate"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/rotate"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_text"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/text"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_beauty"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/image_edit_menu_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stickers_type_animal"
+                android:layout_width="34dp"
+                android:layout_height="34dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/beauty"
+                android:textColor="@color/toolBarTextColor"
+                android:textSize="@dimen/image_edit_text_size"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</HorizontalScrollView>
+

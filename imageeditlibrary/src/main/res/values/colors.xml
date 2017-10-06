@@ -1,0 +1,56 @@
+<resources>
+
+    <color name="white">#ffffff</color>
+
+    <color name="materialcolorpicker__white">#ffffff</color>
+    <color name="materialcolorpicker__red">#f44336</color>
+    <color name="materialcolorpicker__green">#4caf50</color>
+    <color name="materialcolorpicker__blue">#2196f3</color>
+    <color name="materialcolorpicker__grey">#b3b3b3</color>
+    <color name="materialcolorpicker__lightgrey">#d9d9d9</color>
+    <color name="materialcolorpicker__dribble">#ea4c89</color>
+    <color name="materialcolorpicker__dribbledark">#c32361</color>
+    <color name="materialcolorpicker__black">#000000</color>
+    <color name="materialcolorpicker__dialogcolor">#009688</color>
+    <color name="hint_foreground_material_light">#00000000</color>
+    <color name="hint_foreground_material_dark">#00000000</color>
+
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorSplashScreen">@color/colorPrimary</color>
+    <color name="colorPrimaryInverse">#ffffff</color>
+
+    <color name="colorControlNormal">@color/colorAccent</color>
+    <color name="colorControlActivated">@color/colorAccent</color>
+    <color name="colorControlHighlight">@color/colorAccent</color>
+
+    <color name="toolBarTextColor">#747474</color>
+    <color name="toolBarSelectedTextColor">#ff7777</color>
+    <color name="toolBarBGColor">#ffffff</color>
+    <color name="toolBarIconColor">@color/toolBarTextColor</color>
+    <color name="workSpaceColor">#000000</color>
+
+    <color name="imageColor1">#F286D9</color>
+    <color name="imageColor2">#FDDD95</color>
+    <color name="imageColor3">#CFC4FE</color>
+    <color name="imageColor4">#F7F6F6</color>
+    <color name="imageColor5">#84ECFF</color>
+    <color name="imageColor6">#87E7C5</color>
+    <color name="imageColor7">#87EBCA</color>
+    <color name="imageColor8">#B3B6EB</color>
+    <color name="imageColor9">#DB8ADA</color>
+    <color name="imageColor10">#C1F684</color>
+    <color name="imageColor11">#F8C46E</color>
+    <color name="imageColor12">#AFD4FD</color>
+
+    <color name="imageColor13">#E59CC2</color>
+    <color name="imageColor14">#FEA484</color>
+    <color name="imageColor15">#90D6D6</color>
+    <color name="imageColor16">#99E79D</color>
+    <color name="imageColor17">#C5A7D0</color>
+    <color name="imageColor18">#72C1FF</color>
+
+</resources>
