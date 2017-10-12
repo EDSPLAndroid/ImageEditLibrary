@@ -10,7 +10,6 @@ import com.xinlan.imageeditlibrary.Splash;
 import com.xinlan.imageeditlibrary.editimage.EditImageActivity;
 import com.xinlan.imageeditlibrary.editimage.model.ImageEditingData;
 import com.xinlan.imageeditlibrary.editimage.utils.ConstantUtil;
-import com.xinlan.imageeditlibrary.editimage.utils.PrefserUtil;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
