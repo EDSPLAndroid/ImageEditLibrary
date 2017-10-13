@@ -144,7 +144,7 @@ public class FliterListFragment extends BaseEditFragment {
             myLayout.setOrientation(LinearLayout.VERTICAL);
             TextView text = new TextView(activity);
             text.setTextColor(getActivity().getResources().getColor(R.color.toolBarTextColor));
-            text.setTextSize(16);
+            text.setTextSize(14);
             text.setGravity(Gravity.CENTER_HORIZONTAL);
             text.setLayoutParams(params);
             text.setText(fliters[i]);
@@ -154,7 +154,7 @@ public class FliterListFragment extends BaseEditFragment {
 
             if(EditImageActivity.currentEditedFile!=null) {
                 final int finalI = i;
-                Picasso.with(getActivity()).load(EditImageActivity.currentEditedFile).transform(new RoundedCornersTransform(0, 8)).into(new Target() {
+                Picasso.with(getActivity()).load(EditImageActivity.currentEditedFile).transform(new RoundedCornersTransform(0, 14)).into(new Target() {
                     @Override
                     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                         //imageView.setImageBitmap(bitmap);
