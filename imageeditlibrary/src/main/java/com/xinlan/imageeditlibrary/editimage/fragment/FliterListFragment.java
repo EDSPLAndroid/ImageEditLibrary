@@ -24,6 +24,7 @@ import com.xinlan.imageeditlibrary.R;
 import com.xinlan.imageeditlibrary.editimage.EditImageActivity;
 import com.xinlan.imageeditlibrary.editimage.ModuleConfig;
 import com.xinlan.imageeditlibrary.editimage.fliter.PhotoProcessing;
+import com.xinlan.imageeditlibrary.editimage.utils.RoundedCornersTransform;
 import com.xinlan.imageeditlibrary.editimage.view.imagezoom.ImageViewTouchBase;
 
 import java.util.ArrayList;
@@ -153,7 +154,7 @@ public class FliterListFragment extends BaseEditFragment {
 
             if(EditImageActivity.currentEditedFile!=null) {
                 final int finalI = i;
-                Picasso.with(getActivity()).load(EditImageActivity.currentEditedFile).into(new Target() {
+                Picasso.with(getActivity()).load(EditImageActivity.currentEditedFile).transform(new RoundedCornersTransform(0, 8)).into(new Target() {
                     @Override
                     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                         //imageView.setImageBitmap(bitmap);
