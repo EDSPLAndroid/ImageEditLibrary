@@ -3,6 +3,7 @@ package com.xinlan.imageeditlibrary.editimage.fragment;
 import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,12 +16,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 import com.xinlan.imageeditlibrary.AppBaseActivity;
 import com.xinlan.imageeditlibrary.R;
 import com.xinlan.imageeditlibrary.editimage.EditImageActivity;
 import com.xinlan.imageeditlibrary.editimage.ModuleConfig;
 import com.xinlan.imageeditlibrary.editimage.fliter.PhotoProcessing;
 import com.xinlan.imageeditlibrary.editimage.view.imagezoom.ImageViewTouchBase;
+
+import java.util.ArrayList;
 
 
 /**
@@ -115,7 +121,12 @@ public class FliterListFragment extends BaseEditFragment {
     /**
      * 装载滤镜
      */
+
+
+    ArrayList<ImageView> imageViewArrayList;
+    Bitmap filterTypeBitmap;
     private void setUpFliters() {
+        imageViewArrayList = new ArrayList<>();
         fliters = getResources().getStringArray(R.array.fliters);
         if (fliters == null)
             return;
@@ -136,9 +147,39 @@ public class FliterListFragment extends BaseEditFragment {
             text.setGravity(Gravity.CENTER_HORIZONTAL);
             text.setLayoutParams(params);
             text.setText(fliters[i]);
-            ImageView imageView = new ImageView(activity);
+            final ImageView imageView = new ImageView(activity);
             imageView.setLayoutParams(imageparams);
             imageView.setImageResource(R.drawable.stickers_type_animal);
+
+            if(EditImageActivity.currentEditedFile!=null) {
+                final int finalI = i;
+                Picasso.with(getActivity()).load(EditImageActivity.currentEditedFile).into(new Target() {
+                    @Override
+                    public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+                        //imageView.setImageBitmap(bitmap);
+                        filterTypeBitmap = bitmap;
+                        imageViewArrayList.add(imageView);
+                        if (finalI == 0) {
+                            imageView.setImageBitmap(bitmap);
+                            return;
+                        }
+
+                        SetFilterTypeImage task = new SetFilterTypeImage();
+                        task.execute(finalI);
+                    }
+
+                    @Override
+                    public void onBitmapFailed(Drawable errorDrawable) {
+
+                    }
+
+                    @Override
+                    public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+                    }
+                });
+            }
+
             myLayout.addView(imageView);
             myLayout.addView(text);
             mFilterGroup.addView(myLayout, params);
@@ -227,6 +268,60 @@ public class FliterListFragment extends BaseEditFragment {
             dialog = AppBaseActivity.getLoadingDialog(getActivity(), R.string.handing,
                     false);
             dialog.show();
+        }
+
+    }// end inner class
+
+
+     private final class SetFilterTypeImage extends AsyncTask<Integer, Void, Bitmap> {
+        //private Dialog dialog;
+        private Bitmap srcBitmap;
+        private ImageView imageView;
+
+
+        @Override
+        protected Bitmap doInBackground(Integer... params) {
+            int type = params[0];
+            if (srcBitmap != null && !srcBitmap.isRecycled()) {
+                srcBitmap.recycle();
+            }
+
+            imageView = imageViewArrayList.get(type);
+
+            srcBitmap = Bitmap.createBitmap(filterTypeBitmap.copy(
+                    Bitmap.Config.RGB_565, true));
+            return PhotoProcessing.filterPhoto(srcBitmap, type);
+        }
+
+        @Override
+        protected void onCancelled() {
+            super.onCancelled();
+            //dialog.dismiss();
+        }
+
+        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+        @Override
+        protected void onCancelled(Bitmap result) {
+            super.onCancelled(result);
+            //dialog.dismiss();
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap result) {
+            super.onPostExecute(result);
+            //dialog.dismiss();
+            if (result == null)
+                return;
+
+            imageView.setImageBitmap(result);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            /*dialog = AppBaseActivity.getLoadingDialog(getActivity(), R.string.handing,
+                    false);
+            dialog.show();*/
         }
 
     }// end inner class

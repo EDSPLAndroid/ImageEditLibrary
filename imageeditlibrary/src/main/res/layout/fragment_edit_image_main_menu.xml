@@ -195,15 +195,6 @@
                 android:textSize="@dimen/image_edit_text_size"/>
 
         </LinearLayout>
-
-
-
-
-
-
-
-
-
-    </LinearLayout>
+</LinearLayout>
 </HorizontalScrollView>
 

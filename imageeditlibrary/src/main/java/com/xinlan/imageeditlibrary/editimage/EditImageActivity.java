@@ -759,10 +759,13 @@ public class EditImageActivity extends AppBaseActivity {
         startImageEditing(file);
     }
 
+    public static File currentEditedFile;
+
     private void startImageEditing(File file) {
 
         if (file != null) {
             File outputFile = FileUtils.genEditFile(getResources().getString(R.string.app_name));
+            currentEditedFile=file;
 
             //EditImageActivity.start(this, file.getPath(), outputFile.getAbsolutePath(), ACTION_REQUEST_EDITIMAGE);
 
