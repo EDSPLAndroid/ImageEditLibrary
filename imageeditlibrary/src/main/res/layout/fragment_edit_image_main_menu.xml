@@ -6,6 +6,7 @@
     android:layout_height="fill_parent">
 
     <LinearLayout
+        android:layout_marginTop="@dimen/margin2x"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:orientation="horizontal">
@@ -19,8 +20,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/brush"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,8 +42,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/camera"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
             <TextView
 
                 android:layout_width="wrap_content"
@@ -65,8 +66,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/stamp"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
             <TextView
 
                 android:layout_width="wrap_content"
@@ -89,8 +90,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/color"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
             <TextView
 
                 android:layout_width="wrap_content"
@@ -111,8 +112,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/crop"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
             <TextView
 
                 android:layout_width="wrap_content"
@@ -134,8 +135,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/rotate"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
             <TextView
 
                 android:layout_width="wrap_content"
@@ -157,8 +158,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/font"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
             <TextView
 
                 android:layout_width="wrap_content"
@@ -180,8 +181,8 @@
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/smiling_girl"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
             <TextView
 
                 android:layout_width="wrap_content"

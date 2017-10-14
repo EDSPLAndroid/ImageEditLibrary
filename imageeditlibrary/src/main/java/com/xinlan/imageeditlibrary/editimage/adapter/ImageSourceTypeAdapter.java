@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
@@ -125,6 +126,8 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
             }
             else if(name.equals(ADD_IMAGE_FROM_CAMERA))
             {
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(96,96);
+                imageHoler.icon.setLayoutParams(params);
                 imageHoler.icon.setImageDrawable(imageHoler.icon.getContext().getResources().getDrawable(R.drawable.camera_add));
                 //Picasso.with(imageHoler.icon.getContext()).load(stickerCategoryDataBeanArrayList.get(position).getStickerCategoryURL()).resize(150,150).into(imageHoler.icon);
                 //ImageLoaderHelper.loadTransform(imageHoler.icon,stickerCategoryDataBeanArrayList.get(position).getStickerCategoryURL(),imageHoler.icon.getContext().getResources().getDrawable(R.drawable.sticker_normal),imageHoler.icon.getContext().getResources().getString(R.string.imageTransformation_StarMaskTransformation), ConstantUtil.URL);
