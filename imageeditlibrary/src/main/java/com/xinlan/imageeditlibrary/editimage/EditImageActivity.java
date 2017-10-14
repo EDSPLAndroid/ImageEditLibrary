@@ -12,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -760,12 +761,13 @@ public class EditImageActivity extends AppBaseActivity {
     }
 
     public static File currentEditedFile;
+    public static String currentEditedFilePath;
 
     private void startImageEditing(File file) {
 
         if (file != null) {
-            File outputFile = FileUtils.genEditFile(getResources().getString(R.string.app_name));
             currentEditedFile=file;
+            File outputFile = FileUtils.genEditFile(getResources().getString(R.string.app_name));
 
             //EditImageActivity.start(this, file.getPath(), outputFile.getAbsolutePath(), ACTION_REQUEST_EDITIMAGE);
 
@@ -832,7 +834,17 @@ public class EditImageActivity extends AppBaseActivity {
         FileOutputStream fos;
         try {
 
-            File file = File.createTempFile("prefix", "suffix", getCacheDir());
+            //File file = File.createTempFile("prefix", "suffix", getCacheDir());
+
+
+            File folder = new File(Environment.getExternalStorageDirectory() + "/"+getString(R.string.app_name));
+
+            if (!folder.exists()) {
+                folder.mkdirs(); //make all the directory structures needed
+            }
+
+            //File file = new File(Environment.getExternalStorageDirectory() + "/"+fileName+"_"+System.currentTimeMillis()+".png");
+            final File file = new File(folder.getPath() + "/"+fileName+"_"+System.currentTimeMillis()+".png");
 
             fos = new FileOutputStream(file);
 

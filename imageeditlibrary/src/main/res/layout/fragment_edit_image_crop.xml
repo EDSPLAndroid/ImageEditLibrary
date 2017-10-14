@@ -25,5 +25,4 @@
             android:orientation="horizontal" >
         </LinearLayout>
     </HorizontalScrollView>
-
 </LinearLayout>
