@@ -15,23 +15,22 @@
             android:layout_margin="@dimen/image_edit_menu_margin"
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
+
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
-            <TextView
+                android:src="@drawable/brush"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
 
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
                 android:gravity="center"
                 android:text="@string/edit"
                 android:textColor="@color/toolBarTextColor"
+                android:layout_marginTop="4dp"
                 android:textSize="@dimen/image_edit_text_size"/>
-
-
         </LinearLayout>
         <LinearLayout
             android:id="@+id/btn_addImage"
@@ -41,15 +40,15 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
+                android:src="@drawable/camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="@string/strAddImage"
                 android:textColor="@color/toolBarTextColor"
@@ -65,15 +64,15 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
+                android:src="@drawable/stamp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="@string/stickers"
                 android:textColor="@color/toolBarTextColor"
@@ -89,15 +88,15 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
+                android:src="@drawable/color"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="4dp"
                 android:text="@string/fliter"
                 android:textColor="@color/toolBarTextColor"
                 android:textSize="@dimen/image_edit_text_size"/>
@@ -111,15 +110,15 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
+                android:src="@drawable/crop"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="@string/crop"
                 android:textColor="@color/toolBarTextColor"
@@ -134,15 +133,15 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
+                android:src="@drawable/rotate"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="@string/rotate"
                 android:textColor="@color/toolBarTextColor"
@@ -157,15 +156,15 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
+                android:src="@drawable/font"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="@string/text"
                 android:textColor="@color/toolBarTextColor"
@@ -180,20 +179,19 @@
             android:layout_height="match_parent">
             <ImageView
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/stickers_type_animal"
-                android:layout_width="34dp"
-                android:layout_height="34dp" />
+                android:src="@drawable/smiling_girl"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:text="@string/beauty"
                 android:textColor="@color/toolBarTextColor"
                 android:textSize="@dimen/image_edit_text_size"/>
-
         </LinearLayout>
 </LinearLayout>
 </HorizontalScrollView>

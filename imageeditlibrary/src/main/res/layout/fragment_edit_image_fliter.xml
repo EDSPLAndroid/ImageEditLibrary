@@ -15,14 +15,14 @@
     <HorizontalScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1" >
+        android:layout_weight="1"
+        android:scrollbars="none">
 
         <LinearLayout
             android:id="@+id/fliter_group"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
         </LinearLayout>
     </HorizontalScrollView>
-
 </LinearLayout>

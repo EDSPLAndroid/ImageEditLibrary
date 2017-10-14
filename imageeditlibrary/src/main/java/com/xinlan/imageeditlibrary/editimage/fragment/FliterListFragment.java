@@ -127,6 +127,7 @@ public class FliterListFragment extends BaseEditFragment {
     ArrayList<ImageView> imageViewArrayList;
     Bitmap filterTypeBitmap;
     private void setUpFliters() {
+
         imageViewArrayList = new ArrayList<>();
         fliters = getResources().getStringArray(R.array.fliters);
         if (fliters == null)
@@ -134,7 +135,7 @@ public class FliterListFragment extends BaseEditFragment {
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.CENTER;
-        LinearLayout.LayoutParams imageparams = new LinearLayout.LayoutParams(64,64);
+        LinearLayout.LayoutParams imageparams = new LinearLayout.LayoutParams(80,80);
         imageparams.gravity = Gravity.CENTER;
         params.setMargins(12,0,12,0);
         mFilterGroup.removeAllViews();
@@ -144,13 +145,13 @@ public class FliterListFragment extends BaseEditFragment {
             myLayout.setOrientation(LinearLayout.VERTICAL);
             TextView text = new TextView(activity);
             text.setTextColor(getActivity().getResources().getColor(R.color.toolBarTextColor));
-            text.setTextSize(14);
+            text.setTextSize(10);
             text.setGravity(Gravity.CENTER_HORIZONTAL);
             text.setLayoutParams(params);
             text.setText(fliters[i]);
             final ImageView imageView = new ImageView(activity);
             imageView.setLayoutParams(imageparams);
-            imageView.setImageResource(R.drawable.stickers_type_animal);
+            //imageView.setImageResource(R.drawable.color);
 
             if(EditImageActivity.currentEditedFile!=null) {
                 final int finalI = i;
