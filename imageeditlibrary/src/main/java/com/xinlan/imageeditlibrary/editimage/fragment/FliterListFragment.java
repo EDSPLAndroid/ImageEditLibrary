@@ -155,7 +155,7 @@ public class FliterListFragment extends BaseEditFragment {
 
             if(EditImageActivity.currentEditedFile!=null) {
                 final int finalI = i;
-                Picasso.with(getActivity()).load(EditImageActivity.currentEditedFile).transform(new RoundedCornersTransform(0, 14)).into(new Target() {
+                Picasso.with(getActivity()).load(EditImageActivity.currentEditedFile).transform(new RoundedCornersTransform(0, 2)).resize(50,50).into(new Target() {
                     @Override
                     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                         //imageView.setImageBitmap(bitmap);
