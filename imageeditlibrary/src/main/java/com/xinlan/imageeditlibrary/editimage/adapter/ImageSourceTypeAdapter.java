@@ -46,6 +46,7 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
     List<ImageEditingData.StickerDataBean.StickerCategoryDataBean> stickerCategoryDataBeanArrayList;
 
     public static String ADD_IMAGE_FROM_CAMERA = "Camera";
+    public static String ADD_IMAGE_FROM_GALLERY_CATEGORY = "Gallery_Category";
     public static String ADD_IMAGE_FROM_GALLERY = "Gallery";
 
     public ImageSourceTypeAdapter(AddImageFragment fragment) {
@@ -62,6 +63,12 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
         stickerCategoryDataBean.setStickerCategoryURL("https://cdn1.iconfinder.com/data/icons/camera-13/100/Artboard_62-512.png");
 
         stickerCategoryDataBeanArrayList.add(stickerCategoryDataBean);
+
+        /*ImageEditingData.StickerDataBean.StickerCategoryDataBean stickerCategoryDataBean2 = new ImageEditingData.StickerDataBean.StickerCategoryDataBean();
+        stickerCategoryDataBean2.setStickerCategoryName(ADD_IMAGE_FROM_GALLERY_CATEGORY);
+        stickerCategoryDataBean2.setStickerCategoryURL("https://cdn1.iconfinder.com/data/icons/camera-13/100/Artboard_62-512.png");
+
+        stickerCategoryDataBeanArrayList.add(stickerCategoryDataBean2);*/
 
         /*stickerCategoryDataBean = new ImageEditingData.StickerDataBean.StickerCategoryDataBean();
         stickerCategoryDataBean.setStickerCategoryName(ADD_IMAGE_FROM_GALLERY);
@@ -132,6 +139,14 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
                 //Picasso.with(imageHoler.icon.getContext()).load(stickerCategoryDataBeanArrayList.get(position).getStickerCategoryURL()).resize(150,150).into(imageHoler.icon);
                 //ImageLoaderHelper.loadTransform(imageHoler.icon,stickerCategoryDataBeanArrayList.get(position).getStickerCategoryURL(),imageHoler.icon.getContext().getResources().getDrawable(R.drawable.sticker_normal),imageHoler.icon.getContext().getResources().getString(R.string.imageTransformation_StarMaskTransformation), ConstantUtil.URL);
             }
+            else if(name.equals(ADD_IMAGE_FROM_GALLERY_CATEGORY))
+            {
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(96,96);
+                imageHoler.icon.setLayoutParams(params);
+                imageHoler.icon.setImageDrawable(imageHoler.icon.getContext().getResources().getDrawable(R.drawable.add_camera_photo));
+                //Picasso.with(imageHoler.icon.getContext()).load(stickerCategoryDataBeanArrayList.get(position).getStickerCategoryURL()).resize(150,150).into(imageHoler.icon);
+                //ImageLoaderHelper.loadTransform(imageHoler.icon,stickerCategoryDataBeanArrayList.get(position).getStickerCategoryURL(),imageHoler.icon.getContext().getResources().getDrawable(R.drawable.sticker_normal),imageHoler.icon.getContext().getResources().getString(R.string.imageTransformation_StarMaskTransformation), ConstantUtil.URL);
+            }
 
             imageHoler.myView.setOnClickListener(new OnClickListener() {
                 @Override
@@ -152,6 +167,12 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
                         //addImageFragment.takePhotoClick();
                         //addImageFragment.swipToStickerDetails(PrefserUtil.getCurrentImageEditingData(addImageFragment.getActivity()).getStickerData().getStickerCategoryData().get(position).getChildren());
                     }
+                    else if (stickerCategoryDataBeanArrayList.get(position).getStickerCategoryName().equals(ADD_IMAGE_FROM_GALLERY_CATEGORY)) {
+                        //addImageFragment.swipToStickerDetails(stickerCategoryDataBeanArrayList.get(position).getStickerCategoryURL(),ConstantUtil.URL);
+                        selectFromGalleryAblum();
+                        //addImageFragment.takePhotoClick();
+                        //addImageFragment.swipToStickerDetails(PrefserUtil.getCurrentImageEditingData(addImageFragment.getActivity()).getStickerData().getStickerCategoryData().get(position).getChildren());
+                    }
                 }
             });
         } catch (Exception e) {
@@ -167,6 +188,14 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
         }//end if
     }
 
+    private void selectFromGalleryAblum() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            checkPermissionsForAlbum();
+        } else {
+            readImageFromGalleryAlbum();
+        }//end if
+    }
+
     private void checkPermissions() {
         if (ActivityCompat.checkSelfPermission(addImageFragment.getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -178,9 +207,24 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
         readImageFromGallery();
     }
 
+    private void checkPermissionsForAlbum() {
+        if (ActivityCompat.checkSelfPermission(addImageFragment.getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(addImageFragment.getActivity(),
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    REQUEST_PERMISSON_STORAGE_ALBUM);
+            return;
+        }
+        readImageFromGalleryAlbum();
+    }
+
     private void readImageFromGallery() {
         FetchFileFromDeviceTask fetchFileFromDeviceTaskImages = new FetchFileFromDeviceTask(addImageFragment.getActivity(), onGetAllFileList, FetchFileFromDeviceTask.FILE_TYPE_IMAGES);
         fetchFileFromDeviceTaskImages.execute();
+    }
+
+    private void readImageFromGalleryAlbum() {
+        addImageFragment.imageFromGalleryAlbum();
     }
 
     FetchFileFromDeviceTask.OnGetAllFileList onGetAllFileList = new FetchFileFromDeviceTask.OnGetAllFileList() {
@@ -217,6 +261,13 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
                 && grantResults.length > 0
                 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             readImageFromGallery();
+            return;
+        }//end if
+
+        if (requestCode == REQUEST_PERMISSON_STORAGE_ALBUM
+                && grantResults.length > 0
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            readImageFromGalleryAlbum();
             return;
         }//end if
 
@@ -308,6 +359,7 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
     };
 
     public static final int REQUEST_PERMISSON_STORAGE = 1;
+    public static final int REQUEST_PERMISSON_STORAGE_ALBUM = 3;
     public static final int REQUEST_PERMISSON_CAMERA = 2;
     public static final int TAKE_PHOTO_CODE = 8;
     private Uri photoURI = null;

@@ -23,6 +23,7 @@ import android.widget.ViewFlipper;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 import com.xinlan.imageeditlibrary.FileUtils;
+import com.xinlan.imageeditlibrary.ImageFromMediaActivity;
 import com.xinlan.imageeditlibrary.R;
 import com.xinlan.imageeditlibrary.editimage.EditImageActivity;
 import com.xinlan.imageeditlibrary.editimage.ModuleConfig;
@@ -207,6 +208,12 @@ public class AddImageFragment extends BaseEditFragment {
 
     }
 
+    public void imageFromGalleryAlbum() {
+
+        Intent intent = new Intent(getActivity(), ImageFromMediaActivity.class);
+        startActivityForResult(intent,PICK_GALLERY_IMAGE_REQUEST_ALBUM);
+    }
+
     /**
      * 返回主菜单页面
      *
@@ -272,9 +279,14 @@ public class AddImageFragment extends BaseEditFragment {
         if (requestCode == PICK_CAMERA_IMAGE_REQUEST && resultCode == RESULT_OK) {
             swipToStickerDetails(fileUri.getPath(),ConstantUtil.FILE);
         }
+        else if (requestCode == PICK_GALLERY_IMAGE_REQUEST_ALBUM && resultCode == RESULT_OK) {
+            String filePath = data.getStringExtra(EditImageActivity.FILE_PATH);
+            swipToStickerDetails(filePath,ConstantUtil.FILE);
+        }
     }
 
     private int PICK_CAMERA_IMAGE_REQUEST = 2;
+    private int PICK_GALLERY_IMAGE_REQUEST_ALBUM = 3;
 
 
 }// end class
