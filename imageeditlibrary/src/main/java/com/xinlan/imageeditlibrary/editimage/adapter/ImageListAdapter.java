@@ -82,7 +82,7 @@ public class ImageListAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         //Picasso.with(((ImageHolder) holder).image.getContext()).load(path).into(imageHoler.image);
 
-        ImageLoaderHelper.loadTransform(imageHoler.image,imagePath,imageHoler.image.getContext().getResources().getDrawable(R.drawable.sticker_normal),shapeType,imageType,100,100,true);
+        ImageLoaderHelper.loadTransform(imageHoler.image,imagePath,null,shapeType,imageType,100,100,true);
 
         /*if(imageType.equals(ConstantUtil.URL)) {
             Picasso.with(((ImageHolder) holder).image.getContext()).load(new File(imagePath)).resize(50, 50).into(new Target() {

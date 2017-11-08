@@ -79,6 +79,7 @@ public class ImageFromMediaActivity extends AppCompatActivity {
             intent.addCategory(Intent.CATEGORY_OPENABLE);
             intent.setType("image/jpeg");
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
             startActivityForResult(intent, GALLERY_KITKAT_INTENT_CALLED);
         }
     }
@@ -125,6 +126,7 @@ public class ImageFromMediaActivity extends AppCompatActivity {
                         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
                         intent.addCategory(Intent.CATEGORY_OPENABLE);
                         intent.setType("image/jpeg");
+                        intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
                         startActivityForResult(intent, GALLERY_KITKAT_INTENT_CALLED);
                     }
                 } else {

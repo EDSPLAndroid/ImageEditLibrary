@@ -64,11 +64,11 @@ public class ImageSourceTypeAdapter extends RecyclerView.Adapter<ViewHolder> imp
 
         stickerCategoryDataBeanArrayList.add(stickerCategoryDataBean);
 
-        /*ImageEditingData.StickerDataBean.StickerCategoryDataBean stickerCategoryDataBean2 = new ImageEditingData.StickerDataBean.StickerCategoryDataBean();
+        ImageEditingData.StickerDataBean.StickerCategoryDataBean stickerCategoryDataBean2 = new ImageEditingData.StickerDataBean.StickerCategoryDataBean();
         stickerCategoryDataBean2.setStickerCategoryName(ADD_IMAGE_FROM_GALLERY_CATEGORY);
         stickerCategoryDataBean2.setStickerCategoryURL("https://cdn1.iconfinder.com/data/icons/camera-13/100/Artboard_62-512.png");
 
-        stickerCategoryDataBeanArrayList.add(stickerCategoryDataBean2);*/
+        stickerCategoryDataBeanArrayList.add(stickerCategoryDataBean2);
 
         /*stickerCategoryDataBean = new ImageEditingData.StickerDataBean.StickerCategoryDataBean();
         stickerCategoryDataBean.setStickerCategoryName(ADD_IMAGE_FROM_GALLERY);

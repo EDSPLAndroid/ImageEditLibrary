@@ -42,7 +42,8 @@ public class SplashDemo extends Splash {
 
     //String imgUrl="https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg";
     String imgUrl="http://www.planwallpaper.com/static/images/city_of_love-wallpaper-1366x768.jpg";
-    String imgDataUrl="http://174.66.76.164/manageapp/File/ImageEditingJSONData.txt";
+    //String imgDataUrl="http://174.66.76.164/manageapp/File/ImageEditingJSONData.txt";
+    String imgDataUrl="http://174.66.76.164/manageapp/File/greetingsapp.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

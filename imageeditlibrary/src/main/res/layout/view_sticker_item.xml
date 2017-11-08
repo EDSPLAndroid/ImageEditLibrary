@@ -1,9 +1,30 @@
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="wrap_content"
+android:layout_height="@dimen/bottom_banner_height"
+android:gravity="center_horizontal|center_vertical"
+android:id="@+id/rootView"
+android:layout_marginLeft="8dp">
+
+<ImageView
     android:id="@+id/img"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:maxHeight="50dp"
-    android:maxWidth="50dp"
-    android:padding="@dimen/margin1x"
-    android:scaleType="centerInside" />
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:scaleType="centerInside"
+    tools:src="@drawable/yd_image_tx"
+    android:src="@drawable/yd_image_tx"
+    android:visibility="visible"/>
+</LinearLayout>
+
+<!--
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/img"
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:maxHeight="50dp"
+android:maxWidth="50dp"
+android:padding="@dimen/margin1x"
+android:scaleType="centerInside" />-->
